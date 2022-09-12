@@ -11,19 +11,24 @@
     //PROCESSAMENTO
     let numeros = [];
     let resultado = [];
-    if (n1 > n2 && n1 > n3 && n2 > n3) {
-        numero = [n1, n2, n3];
-    } else if (n1 > n2 && n1 > n3 && n3 > n2) {
-        numero = [n1, n3, n2]
-    } else if (n2 > n1 && n2 > n3 && n1 < n3) {
-        numero = [n2, n3, n1];
-    } else if (n2 > n1 && n2 > n3 && n1 > n3) {
-        numero = [n2, n1, n3];
-    } else if (n3 > n1 && n3 > n2 && n2 > n1) {
-        numero = [n3, n2, n1];
-    } else {
-        numero = [n3, n1, n2];
+    if (n1 >= n2 && n2 >= n3) {
+        numeros = [n1, n2, n3];
+    }
+    else if (n1 >= n3 && n3 >= n2) {
+        numeros = [n1, n3, n2];
+    }
+    else if (n2 >= n1 && n1 >= n3){
+        numeros = [n2, n1, n3];
+    }
+    else if (n2 >= n3 && n3 >= n1){
+        numeros = [n2, n3, n1];
+    }
+    else if (n3 >= n2 && n2 >= n1){
+        numeros = [n3, n2, n1];
+    }
+    else {
+        numeros = [n3, n1, n2];
     }
     //SAÍDA
-    document.write(numero.join(" - "));
+    document.write(numeros.join(" - "));
 </script>
