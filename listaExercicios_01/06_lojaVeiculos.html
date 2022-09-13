@@ -10,11 +10,29 @@
     //Apresente a lista final de cada tipo de veículo.
 
     //ENTRADA
-
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+    let tiposDeCarro = ["SUV", "Sedan", "Hatch"];
+    
+    const carro1 = prompt("Informe o primeiro carro a ser inserido na lista: ");
+    let tipoVeiculo = prompt("Informe o tipo de veículo: ("+ tiposDeCarro (" | ") + ")");
+    const carro2 = prompt("Informe o segundo carro a ser inserido: ");
+    let tipoVeiculo2 = prompt("Informe o tipo de veículo: ("+ tiposDeCarro (" | ") + ")");
+    const carro3 = prompt("Informe o terceiro carro a ser inserido: ");
+    let tipoVeiculo3 = prompt("Informe o tipo de veículo: ("+ tiposDeCarro (" | ") + ")");
 
     //PROCESSAMENTO
-
-
+    if (tipoVeiculo && tipoVeiculo2 && tipoVeiculo3 === "SUV"){
+        carrosSUV.push(carro1, carro2, carro3);
+    }
+   else if(tipoVeiculo && tipoVeiculo2 && tipoVeiculo3 === "Sedan"){
+    carrosSedan.push(carro1, carro2, carro3);
+   }
+   else{
+    carrosHatch.push(carro1, carro2, carro3);
+   }
     //SAÍDA
+    document.write(`A lista de carros SUV é ${carrosSUV}, a lista de carros Sedan é ${carrosSedan} e a lista de carros Hatch é ${carrosHatch}`);
 
 </script>
