@@ -13,26 +13,21 @@
     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
     let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
     let carrosHatch = ["308", "Focus", "i30"];
-    let tiposDeCarro = ["SUV", "Sedan", "Hatch"];
-    
+
+    const tiposDeCarro = ["1-SUV", "2-Sedan", "3-Hatch"];
     const carro1 = prompt("Informe o primeiro carro a ser inserido na lista: ");
-    let tipoVeiculo = prompt("Informe o tipo de veículo: ("+ tiposDeCarro (" | ") + ")");
+    const tipoVeiculo = parseInt(prompt("Informe o codigo do veículo: ("+ tiposDeCarro.join(" | ") + ")"));
     const carro2 = prompt("Informe o segundo carro a ser inserido: ");
-    let tipoVeiculo2 = prompt("Informe o tipo de veículo: ("+ tiposDeCarro (" | ") + ")");
+    const tipoVeiculo2 = parseInt(prompt("Informe o codigo do veículo: ("+ tiposDeCarro.join(" | ") + ")"));
     const carro3 = prompt("Informe o terceiro carro a ser inserido: ");
-    let tipoVeiculo3 = prompt("Informe o tipo de veículo: ("+ tiposDeCarro (" | ") + ")");
+    const tipoVeiculo3 = parseInt(prompt("Informe o codigo do veículo: ("+ tiposDeCarro.join(" | ") + ")"));
 
     //PROCESSAMENTO
-    if (tipoVeiculo && tipoVeiculo2 && tipoVeiculo3 === "SUV"){
-        carrosSUV.push(carro1, carro2, carro3);
-    }
-   else if(tipoVeiculo && tipoVeiculo2 && tipoVeiculo3 === "Sedan"){
-    carrosSedan.push(carro1, carro2, carro3);
-   }
-   else{
-    carrosHatch.push(carro1, carro2, carro3);
-   }
+    (tipoVeiculo === 1) ? carrosSUV.push(carro1) : (tipoVeiculo === 2) ? carrosSedan.push(carro1) : carrosHatch.push(carro1);
+    (tipoVeiculo2 === 1) ? carrosSUV.push(carro2) : (tipoVeiculo2 === 2) ? carrosSedan.push(carro2) : carrosHatch.push(carro2);
+    (tipoVeiculo3 === 1) ? carrosSUV.push(carro3) : (tipoVeiculo3 === 2) ? carrosSedan.push(carro3) : carrosHatch.push(carro3);
+
     //SAÍDA
-    document.write(`A lista de carros SUV é ${carrosSUV}, a lista de carros Sedan é ${carrosSedan} e a lista de carros Hatch é ${carrosHatch}`);
+    document.write(`A lista de carros SUV é ${carrosSUV} <br> a lista de carros Sedan é ${carrosSedan} <br> e a lista de carros Hatch é ${carrosHatch}`);
 
 </script>
