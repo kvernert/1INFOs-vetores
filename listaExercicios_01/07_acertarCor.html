@@ -12,7 +12,7 @@
     //ENTRADA
     const nomeCores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
     let numeroAleatorio = Math.floor(Math.random() * 7);
-    const corInformada = prompt(`Informe uma cor(` + nomeCores.join(" | ") + `)`);
+    const corInformada = prompt(`Informe uma cor(` + nomeCores.join(" | ") + `)`).trim().toLowerCase();
     
     //PROCESSAMENTO
     let resposta = nomeCores.indexOf(corInformada);
